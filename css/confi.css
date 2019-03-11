@@ -1,0 +1,42 @@
+.center{
+			text-align: center;
+
+}
+.izquierda{
+			text-align: right;
+
+}
+.justificado{
+	text-orientation: text-justify;
+
+}
+.letra{
+	font-style: arial;
+	font-family: bolt;
+}
+.letra::first-letter{
+	color: red;
+	font-size: 70px;
+}
+.contenedor1{
+	background: blue;
+	text-align: center;
+}
+.contenedor2{
+	color: #343a40;
+	text-align: right;
+	padding-bottom: 30px;
+	text-orientation: text-justify;
+	font-size: 50px;
+
+}
+.contenedor3{
+	text-align: left;
+}
+.contenedor4{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin-right: auto;
+  margin-left: auto;
+}

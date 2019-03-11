@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SmoothScroll</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap-flex.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">  
+    <link rel="stylesheet" type="text/css" href="css/confi.css">  
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!-- Scroll -->
+    <script src="js/smooth-scroll.min.js"></script>
+    <script>
+      smoothScroll.init({
+      selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+      selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+      speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+      easing: 'easeInOutCubic', // Easing pattern to use
+      offset: 50, // Integer. How far to offset the scrolling anchor location in pixels
+      callback: function ( anchor, toggle ) {} // Function to run after scrolling
+      });
+    </script>
+    <div class="contenedor4 navbar-fixed-top">
+        <nav class="navbar  navbar-expand-sm navbar-light navbar-dark bg-dark " >
+          <a class="navbar-brand" data-scroll role="button" aria-pressed="true" href="#sec-1" >Cointec</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#uno" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-items-xs-between  flex-items-xs-middle" id="uno">
+            <ul class="navbar-nav mr-auto offset-auto">
+              <li class="nav-item ">
+                <a class="nav-link" data-scroll role="button" aria-pressed="true" href="#sec-2" >Inscribete</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll role="button" aria-pressed="true" href="#sec-3" >Cronograma</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" data-scroll role="button" aria-pressed="true" href="#sec-4" >Ponentes</a>
+              </li>
+
+              
+            </ul>
+            <ul class="navbar-nav col-md-auto"  >
+              <div class="container-fluid">
+                <div class="row ">
+                  <div class="col">
+                    <a  href="facebook.com"> <img src="img/36x36" ></a>
+                  
+                    <a  href="unap.edu.pe"> <img src="img/36x36" ></a>
+                  
+                    <a  href="youtube.com"> <img src="img/36x36" ></a>
+                  </div>
+
+                </div>
+              </div>
+                
+            </ul>
+          </div>
+        </nav>
+      </div>
+    
+    
+  </head>
+  <body onload="empezar()">
+    <br>
+    <!-- SECCIÓN 1 -->
+    <div class="container-fluid ">
+      <div class="row flex-items-xs-center slider-1 flex-items-xs-middle " id="sec-1" >
+            <div class="col-12 center"> <h1 class="letra first-letter">CONEIP</h1> </div>
+            <a class="col-1"></a>
+            <div class="col-10 text-justify"> <h5 class="h5">Forma parte de este grandioso congreso, amaras el conocimiento y tu carrera mas de lo hiciste, se parte de esta generacion de conocimiento, te explicaremos los temas mas actuales para que arrazes con el mercado laboral</h5></div> 
+            <a class="col-1"></a>
+            <div class="col-1"></div>
+            <div class="col-3">
+              <form >
+                    <div class="  ">
+                      <div class="offset-md-0">
+                        <h4 ><p>Pagos</p></h4>
+
+                      </div>
+                      <div class="offset-md-1">
+                        <h6 >
+                          <p>Inscripcion: 20 soles</p>
+                          <p>Certificado: 100 soles</p>
+                        </h6>
+                      </div>
+                      <div class="offset-md-0">
+                        <h4 ><p>Fechas</p></h4>
+
+                      </div>
+                      <div class="offset-md-1">
+                        <h6 >
+                          <p>Inicio: 20/08/19 </p>
+                          <p>Fin:    25/08/19</p>
+                        </h6>
+                      </div>
+                      
+                      
+                    </div>
+              </form>
+            </div>
+            <div class="col-4 contenedor2 ">Faltan:</div>
+            <div class="col-4   " >
+                  <h1>D : H : M : S</h1>
+                            <h1 id="timerDiv" class="">00:00:00</h1>
+
+            </div>
+            <div class="col">
+              
+            </div>
+      </div>
+
+
+      <script src="https://ajax.googleapis,com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchQ8opvBy3Mi7Ce34nWjpBwVTHFGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
+      <script src="tiempo/timer.jquery.min.js"></script>
+      <script>
+          audio = new Audio("sound/alarma.mp3"); 
+          function empezar(){
+                   audio.pause();
+                   audio.currentTime = 0;
+                  $('#timerDiv').timer('remove');
+                  $('#timerDiv').timer({
+                    countdown: true,
+                    duration: '2d2h15m30s', 
+                    callback: function() {  
+                        audio.addEventListener('ended', function() {
+                    this.currentTime = 0;
+                    this.play();
+                }, false);
+                        audio.play();
+                    },
+                    format: '%D:%H:%M:%S'  
+                });
+              }
+        </script> 
+
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 2 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-2 flex-items-xs-middle " id="sec-2" >
+
+        <div class="container" >
+            <div class="row  justify-content-center align-self-center">
+              <div class="col-auto"> <h1>Pre-Inscripcion</h1> </div>        
+            </div>
+            <form method="POST" action="php/guarda_usuario.php">
+
+              <div class="form-group row">
+                <label for="nombre" class="col-sm-2 col-form-label">Nombres</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="nombres" placeholder="Nombres">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="apellidos" class="col-sm-2 col-form-label">Apellidos</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="apellidos" placeholder="Apellidos">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" name="email" placeholder="Correo Electronico">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="telefono" class="col-sm-2 col-form-label">Telefono</label>
+                <div class="col-sm-10">
+                <input type="number" class="form-control" name="telefono" placeholder="Telefono">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="departamento" class="col-sm-2 col-form-label">Departamento</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="departamento" placeholder="Procedencia" value="">
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="universidad" class="col-sm-2 col-form-label">Universidad</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" name="universidad" placeholder="Universidad" value="">
+                </div>
+              </div>
+              <input type="hidden" name="estado" value="no">
+              
+              <div class="form group row  justify-content-center align-self-center">
+                <div class="col-auto ">
+                  <button type="submit" value="Registrar" class="btn btn-primary">Inscribirse</button>
+                </div>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 3 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-3 flex-items-xs-middle" id="sec-3" >
+        <div class="row">
+          <div class="col-xs-12"><h1>Además de Flexbox</h1></div>
+          <div class="col-xs-12"><h3>Sección 3</h3></div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 4 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-4 flex-items-xs-middle" id="sec-4" >
+        <div class="row">
+          <div class="col-xs-12"><h1>Suscríbete en Youtube (bluuweb)</h1></div>
+          <div class="col-xs-12"><h3>Sección 4</h3></div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+    
+    <!-- FOOTER -->
+    <div class="container-fluid footer">
+      <div><h6>Desarrollado por Cesar Mamani</a></h6></div>
+    </div>
+    <!-- FIN FOOTER -->
+
+    
+
+    
+  </body>
+</html>

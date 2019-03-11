@@ -1,0 +1,42 @@
+<html>
+	<head>
+	    <title>INICIO</title>
+	    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css">
+	    <style type="text/css">
+			body{
+	   			 background:url('img/fondo2.jpg');
+	    			}
+	    </style>
+	</head>
+<body>
+    <header > 
+        <div class="container">
+          <ul class="nav nav-pills" role="tablist">
+            <li class="active"><a href="inicio.php?id=<?php echo $row['id'];?>">Inicio</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="archivo.php">
+              Archivos <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="nuevo.php">nuevo</a></li>
+                <li><a href="modificar.php">modificar</a></li>
+                <li><a href="buscar.php">buscar</a></li>  
+                <li><a href="eliminar.php">eliminar</a></li>                        
+              </ul>
+            </li>
+           <li><a href="aplicaciones.php">Aplicaciones</a></li>
+           <li><a href="Utilidades.php">Utilidades</a></li>
+           <li><a href="Reportes.html">Reportes</a></li>
+           <li><a href="ayuda.html">Acerca</a></li>
+          </ul>
+        </div>
+    </header>
+    <div align="center">
+   <h1 align="center">INFORMACION CREADOR DEL SISTEMA</h1> <br><br>
+   <p><H4>Nombre:</H4> CESAR WILLY MAMANI CANAZA</p>
+   <p><H4>Telefono:</H4>  962601310</p>
+   <p><H4>Lugar de Residencia:</H4> Puno</p>
+   <p><H4>Especialidad:</H4> Programacion Orientada a objetos</p>
+   <p><H4>Correo Electronico:</H4> rasec.dx@gmail.com</p>
+   <p><H4>Facebook:</H4> <a href="https://www.facebook.com/cesar.willy.mamani.canaza"> willy</a></p></div>
+</body>
+</html>
